@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+    <title>Semantics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #3f7258;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #4e8b6c;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        article {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        aside {
+            background-color: #e9ecef;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #3f7258;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        ol {
+            padding-left: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Here is My Semantics Practice</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="https://zihanlyu.github.io/CSC209/Week1/Part1/">Part1</a></li>
+            <li><a href="https://zihanlyu.github.io/CSC209/Week1/Part1/">Part3</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <main>
+            <section>
+                <h2>W<sup>3</sup>Schools HTML Tutorials</h2>
+                <article>
+                    <h3>The Importance of Semantic HTML</h3>
+                    <p>A semantic element clearly describes its meaning to both the browser and the developer.</p>
+                </article>
+                <article>
+                    <h3>Maine Semantic Elements in HTML</h3>
+                    <ol>
+                        <li>header</li>
+                        <li>nav</li>
+                        <li>article</li>
+                        <li>section</li>
+                        <li>aside</li>
+                        <li>footer</li>
+                    </ol>
+                </article>
+            </section>
+        </main>
+
+        <aside>
+            <h3>HTML Section Elements</h3>
+            <ul>
+                <li>Chapters</li>
+                <li>Introduction</li>
+                <li>News items</li>
+                <li>Contact information</li>
+            </ul>
+            <hr>
+            <h3>Reference</h3>
+            <p>Website template is from HTML&CSS Design and Build Websites by Jon Duckett</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; January 29, 2025 Week1 Part3 Semantics Practice</p>
+    </footer>
+</body>
+</html>
