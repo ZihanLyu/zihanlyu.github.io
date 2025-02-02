@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <head>
     <title>Start Page</title>
     <style>
@@ -39,6 +38,7 @@
             background-color: #ebe3d1;
             padding: 1rem;
             margin-top: 1.8rem;
+            position: relative;
         }
 
         nav ul {
@@ -52,6 +52,36 @@
         nav a {
             color: #593f1e;
             text-decoration: none;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ebe6d1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #593f1e;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1e8d5;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
         .main-content {
@@ -102,19 +132,38 @@
 
     <nav>
         <ul>
-            <li><a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/hw1.html">Homeworks</a></li>
-            <li><a href="https://zihanlyu.github.io/CSC209/Week1/Part3/iframe.html">Labs</a></li>
+            <li class="dropdown">
+                <a>Homeworks</a>
+                <div class="dropdown-content">
+                    <a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/hw1.html">Homework 1</a>
+                    <a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/images.html">Homework 2</a>
+                    <a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/links.html">Homework 3</a>
+                    <a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/lists.html">Homework 4</a>
+                    <a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/tables.html">Homework 5</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a>Labs</a>
+                <div class="dropdown-content">
+                    <a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/hw1.html">Lab 1</a>
+                    <a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/images.html">Lab 2</a>
+                    <a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/links.html">Lab 3</a>
+                    <a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/lists.html">Lab 4</a>
+                    <a href="https://zihanlyu.github.io/CSC209/Week1/Hw1/tables.html">Lab 5</a>
+                </div>
+            </li>
         </ul>
     </nav>
 
     <div class="main-content">
         <main>
             <section>
-                <h2>Configurations</h2>
+                <h1>Configurations</h1>
                 <article>
                     <h3>Homeworks</h3>
-                    <p>Contain links to each weeks' homework</p>
+                    <p>The dropdown tab gives links to all the homework websites.</p>
                     <br />
+                    <p><b>Each homework consists of three parts:</b></p>
                     <ol>
                         <li>Tutorials</li>
                         <li>Technical</li>
@@ -123,6 +172,7 @@
                 </article>
                 <article style="display: flex; align-items: center; justify-content: space-between;">
                     <h3>Labs</h3>
+                    <p>The dropdown tab gives links to all the labs.</p>
                     <figure style="padding-left: 18px;" class="rounded-figure">
                         <img src="Images/piggyStone.png" alt="Picture of a painted stone" width="220"/>
                     </figure>
@@ -135,7 +185,7 @@
                 <img src="Images/squirrel.png" alt="Picture of a Squirrel" width="320"/>
             </figure>
             <hr>
-            <h3>Reference</h3>
+            <h3>References</h3>
             <ul>
                 <li><a href="https://www.w3schools.com/html/html_images.asp">W<sup>3</sup>Schools</a></li>
                 <li><a href="https://wtf.tw/ref/duckett.pdf">HTML&CSS Design and Build Websites</a></li>
@@ -143,4 +193,3 @@
         </aside>
     </div>
 </body>
-</html>
