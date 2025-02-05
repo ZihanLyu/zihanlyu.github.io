@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8"> 
+<html>
+<head>
+  <title>ID</title>
+<style>
+#myHeader {
+  font-size:50px;
+  font-family: 'Brush Script MT', cursive;
+  padding: 20px;
+  text-align: center;
+}
+.recipy {
+  background-color: rgb(239, 225, 199);
+  color: rgb(47, 18, 18);
+  border: 5px dotted rgb(209, 186, 59);
+  margin: 20px;
+  padding: 20px;
+}
+title{
+    text-align: center;
+}
+div{
+    text-align: center;
+}
+</style>
+</head>
+<header>
+  <h1 id="myHeader">RECIPY</h1>
+  <button type="button" onclick="displayResult()">Click Me!</button>
+</header>
+
+<body>
+<div class="recipy">
+<h2>西红柿炒鸡蛋</h2>
+<h3>Tomatoes with Scrambeled Eggs</h3>
+<p>2 Tomatoes</br>2 Eggs</br>1 Pinch of Salt</br>1 Pinch of Sugar</p>
+</div> 
+
+<div class="recipy">
+<h2>鸡蛋饼</h2>
+<h3>Egg Pancake</h3>
+<p>2 Eggs</br>1 lb of wheat</br>1 spring onion</br>1 Pinch of Salt and Black Pepper</p>
+</div>
+
+<div class="recipy">
+<h2>皮蛋瘦肉粥</h2>
+<h3>Thousand-year-old Egg & Pork Congee</h3>
+<p>2 Thousand-year-old Eggs</br>0.5 lb Pork</br>1lb Jasamin Rice</p>
+</div>
+
+<script>
+  function displayResult() {
+    const header = document.getElementById("myHeader");
+    header.innerHTML = "Bon Appétit!";
+    header.style.fontSize = "70px";
+    header.style.color = "rgb(170, 40, 170)";
+  }
+</script>
+
+</body>
+</html>
