@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Recipe Collection</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(239, 225, 199);
+}
+
+header {
+  background-color: rgb(209, 186, 59);
+  padding: 20px;
+  text-align: center;
+  color: rgb(47, 18, 18);
+}
+
+header h2 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 50px;
+  margin: 0;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  background: rgb(229, 215, 189);
+  padding: 20px;
+  border: 3px dotted rgb(209, 186, 59);
+  margin: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav a {
+  color: rgb(47, 18, 18);
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 5px 0;
+  display: block;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 65%;
+  background-color: rgb(239, 225, 199);
+  margin: 10px;
+  border: 5px dotted rgb(209, 186, 59);
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: rgb(209, 186, 59);
+  padding: 10px;
+  text-align: center;
+  color: rgb(47, 18, 18);
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+.recipe {
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  background-color: rgb(209, 186, 59);
+  border: none;
+  color: rgb(47, 18, 18);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(189, 166, 39);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2 id="myHeader">RECIPY</h2>
+  <button type="button" onclick="displayResult()">Click Me!</button>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#recipe1">西红柿炒鸡蛋</a></li>
+      <li><a href="#recipe2">鸡蛋饼</a></li>
+      <li><a href="#recipe3">皮蛋瘦肉粥</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <div id="recipe1" class="recipe">
+      <h2>西红柿炒鸡蛋</h2>
+      <h3>Tomatoes with Scrambled Eggs</h3>
+      <p>2 Tomatoes<br>2 Eggs<br>1 Pinch of Salt<br>1 Pinch of Sugar</p>
+    </div>
+
+    <div id="recipe2" class="recipe">
+      <h2>鸡蛋饼</h2>
+      <h3>Egg Pancake</h3>
+      <p>2 Eggs<br>1 lb of wheat<br>1 spring onion<br>1 Pinch of Salt and Black Pepper</p>
+    </div>
+
+    <div id="recipe3" class="recipe">
+      <h2>皮蛋瘦肉粥</h2>
+      <h3>Thousand-year-old Egg & Pork Congee</h3>
+      <p>2 Thousand-year-old Eggs<br>0.5 lb Pork<br>1lb Jasmine Rice</p>
+    </div>
+  </article>
+</section>
+
+<footer>
+  <p>Enjoy your cooking!</p>
+</footer>
+
+<script>
+function displayResult() {
+  const header = document.getElementById("myHeader");
+  header.innerHTML = "Bon Appétit!";
+  header.style.fontSize = "70px";
+  header.style.color = "rgb(170, 40, 170)";
+}
+</script>
+
+</body>
+</html>

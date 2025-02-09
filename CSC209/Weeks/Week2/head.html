@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Week2 Tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Zihan Lyu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Is A Page Title</title>
+    <style>
+        #myHeader {
+          font-size:50px;
+          font-family: 'Brush Script MT', cursive;
+          padding: 20px;
+          text-align: center;
+        }
+        .recipy {
+          background-color: rgb(239, 225, 199);
+          color: rgb(47, 18, 18);
+          border: 5px dotted rgb(209, 186, 59);
+          margin: 20px;
+          padding: 20px;
+        }
+        title{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+        }
+        </style>
+</head>
+
+<header>
+    <h1 id="myHeader">StickMan</h1>
+    <button type="button" onclick="displayResult()">Click Me!</button>
+</header>
+<head>
+    <base href="https://www.w3schools.com/" target="_blank">
+</head>
+    
+<body>
+<img src="images/stickman.gif" width="24" height="39" alt="Stickman">
+<a href="tags/tag_base.asp">HTML base Tag</a>
+<script>
+    function displayResult() {
+      const header = document.getElementById("myHeader");
+      header.innerHTML = "The Stickman says hi!";
+      header.style.fontSize = "25px";
+      header.style.color = "rgb(50,120,50)";
+      header.style.fontFamily = "Arial, sans-serif";
+    }
+</script>
+</body>
+</html>

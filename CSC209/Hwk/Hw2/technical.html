@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC252 - Fall 2020</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .course-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .course-code {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .semester {
+            margin: 0;
+        }
+
+        .instructor {
+            margin: 0;
+            font-style: italic;
+        }
+
+        .college-logo {
+            max-width: 400px;
+            margin: 20px 0;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            color: blue;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .schedule-table th {
+            background-color: #FFD700;
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .schedule-table td a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .read-me {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .college-logo {
+                max-width: 100%;
+            }
+
+            .schedule-table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="course-info">
+            <div>
+                <div class="course-code">CSC252</div>
+                <p class="semester">Spring 2025</p>
+                <p class="instructor">Ileana<br>Streinu</p>
+            </div>
+        </div>
+        <img src="https://zihanlyu.github.io/CSC209/Images/smithcollege.jpg" alt="Smith College" class="college-logo">
+    </div>
+
+    <h1 class="page-title">209 Web Programming</h1>
+
+    <div class="navigation">
+        <a href="#">Home</a>
+        <a href="#">Schedule</a>
+        <a href="#">Syllabus</a>
+        <a href="#">Requirements</a>
+        <a href="#">Textbook</a>
+        <a href="#">HowTo</a>
+        <a href="#">Resources</a>
+    </div>
+
+    <div class="schedule-section">
+        <h2>Schedule</h2>
+        <div class="read-me">
+            <a href="#">Read me</a>
+        </div>
+
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Date</th>
+                    <th>Lecture</th>
+                    <th>Topic</th>
+                    <th>Hwk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Tu 9/1<br>Th 9/3</td>
+                    <td>Lectures<br>1+2</td>
+                    <td>
+                        Case study: some basic linear time algorithms.<br>
+                        Introduction.<br>
+                        Iterative vs. Recursive algorithms.<br>
+                        Time and space complexity.
+                    </td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tu 9/8<br>Th 9/10</td>
+                    <td><a href="#">Lecture 3</a><br><a href="#">Lecture 4</a></td>
+                    <td>
+                        Algorithm analysis:<br>
+                        Asymptotic analysis: Big Oh and orders of growth.<br>
+                        Worst case, best case, average case analysis.
+                    </td>
+                    <td><a href="#">Ex 1</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
