@@ -3,174 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSC252 - Fall 2020</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .header {
-            margin-bottom: 20px;
-        }
-
-        .course-info {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .course-code {
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-
-        .semester {
-            margin: 0;
-        }
-
-        .instructor {
-            margin: 0;
-            font-style: italic;
-        }
-
-        .college-logo {
-            max-width: 400px;
-            margin: 20px 0;
-        }
-
-        .page-title {
-            text-align: center;
-            font-size: 1.5em;
-            margin: 20px 0;
-        }
-
-        .navigation {
-            margin-bottom: 20px;
-        }
-
-        .navigation a {
-            color: blue;
-            text-decoration: none;
-            display: block;
-            margin: 5px 0;
-        }
-
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .schedule-table th, .schedule-table td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-        }
-
-        .schedule-table th {
-            background-color: #FFD700;
-        }
-
-        .schedule-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .schedule-table td a {
-            color: blue;
-            text-decoration: none;
-        }
-
-        .read-me {
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            .college-logo {
-                max-width: 100%;
-            }
-
-            .schedule-table {
-                font-size: 14px;
-            }
-        }
-    </style>
+    <title>CSC252 - Spring 2025</title>
+    <link id="theme-link" rel="stylesheet" href="lightMode.css">
 </head>
 <body>
     <div class="header">
         <div class="course-info">
             <div>
-                <div class="course-code">CSC252</div>
+                <p class="course-code">CSC209</p>
                 <p class="semester">Spring 2025</p>
                 <p class="instructor">Ileana<br>Streinu</p>
+                <hr />
+                <div class="navigation">
+                    <a href="https://zihanlyu.github.io/CSC209/startPage.html">Start Page</a>
+                    <a href="https://zihanlyu.github.io/CSC209/Hwk/Hw2/tutorial.html">Tutorial</a>
+                    <a href="https://zihanlyu.github.io/CSC209/Hwk/Hw2/creative.html">Creative</a>
+                    <hr />
+                    <a href="https://www.w3schools.com/html/html_images.asp">W<sup>3</sup>Schools</a>
+                    <a href="https://wtf.tw/ref/duckett.pdf">HTML&CSS Design and Build Websites</a>
+
             </div>
         </div>
-        <img src="https://zihanlyu.github.io/CSC209/Images/smithcollege.jpg" alt="Smith College" class="college-logo">
     </div>
 
-    <h1 class="page-title">209 Web Programming</h1>
 
-    <div class="navigation">
-        <a href="#">Home</a>
-        <a href="#">Schedule</a>
-        <a href="#">Syllabus</a>
-        <a href="#">Requirements</a>
-        <a href="#">Textbook</a>
-        <a href="#">HowTo</a>
-        <a href="#">Resources</a>
-    </div>
+    <div class="main-content">
+        <div class="schedule-section" style="text-align: center;">
+            <img src="https://zihanlyu.github.io/CSC209/Images/smithcollege.jpg" alt="Smith College" class="college-logo">
+            <h1 class="page-title">209 Web Programming</h1>
+            <h2>Schedule</h2>
+            <div>
+                <button id = "read-me" type="button" onclick="displayResult()">READ ME!</button>
+                <button id = "theme-link" type="button" onclick="changeStyle()">Change Style</button>
+            </div>
 
-    <div class="schedule-section">
-        <h2>Schedule</h2>
-        <div class="read-me">
-            <a href="#">Read me</a>
+             <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Date</th>
+                        <th>Lecture</th>
+                        <th>Topic</th>
+                        <th>Hwk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Wed<br>Jan. 29</td>
+                        <td>Lecture<br>1</td>
+                        <td>
+                            Introduction.<br>
+                            Step-by-step hands-on activities<br>
+                            Git and GitHub<br>
+                            Starting Hw1
+                        </td>
+                         <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Wed<br>Feb. 5</td>
+                        <td><a href="#">Lecture 2</a></td>
+                        <td>
+                            W<sub>3</sub>Schools Tutorials:<br>
+                            CSS sytling<br>
+                            Interactive JavaScript buttons
+                        </td>
+                        <td><a href="#">Ex 1</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Week</th>
-                    <th>Date</th>
-                    <th>Lecture</th>
-                    <th>Topic</th>
-                    <th>Hwk</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Tu 9/1<br>Th 9/3</td>
-                    <td>Lectures<br>1+2</td>
-                    <td>
-                        Case study: some basic linear time algorithms.<br>
-                        Introduction.<br>
-                        Iterative vs. Recursive algorithms.<br>
-                        Time and space complexity.
-                    </td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Tu 9/8<br>Th 9/10</td>
-                    <td><a href="#">Lecture 3</a><br><a href="#">Lecture 4</a></td>
-                    <td>
-                        Algorithm analysis:<br>
-                        Asymptotic analysis: Big Oh and orders of growth.<br>
-                        Worst case, best case, average case analysis.
-                    </td>
-                    <td><a href="#">Ex 1</a></td>
-                </tr>
-            </tbody>
-        </table>
     </div>
+
+    <script>
+        function displayResult() {
+          const header = document.getElementById("read-me");
+          header.innerHTML = "Homework submitted one day earlier (Monday by midnight) get 10% extra credit.";
+        }
+    </script>
+
+    <script>
+        let currentStyle = 1;
+         function changeStyle() {
+            const stylesheet = document.getElementById("theme-link");
+            if (currentStyle === 1) {
+                stylesheet.href = "darkMode.css";
+                currentStyle = 2 ;
+            } else {
+                stylesheet.href = "lightMode.css";
+                currentStyle = 1;
+            }
+        }
+    </script>
+
 </body>
 </html>
