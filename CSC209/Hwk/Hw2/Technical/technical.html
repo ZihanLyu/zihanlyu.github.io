@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC252 - Spring 2025</title>
+    <link id="theme-link" rel="stylesheet" href="lightMode.css">
+</head>
+<body>
+    <div class="header">
+        <div class="course-info">
+            <div>
+                <p class="course-code">CSC209</p>
+                <p class="semester">Spring 2025</p>
+                <p class="instructor">Ileana<br>Streinu</p>
+                <hr />
+                <div class="navigation">
+                    <a href="../../../startPage.html">Start Page</a>
+                    <a href="../Tutorial/tutorial.html">Tutorial</a>
+                    <a href="../Creative/creative.html">Creative</a>
+                    <hr />
+                    <a href="https://www.w3schools.com/html/html_images.asp">W<sup>3</sup>Schools</a>
+                    <a href="https://wtf.tw/ref/duckett.pdf">HTML&CSS Design and Build Websites</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-content">
+        <div class="schedule-section" style="text-align: center;">
+            <img src="../../../../CSC209/Images/smithcollege.jpg" alt="Smith College" class="college-logo">
+            <h1 class="page-title">209 Web Programming</h1>
+            <h2>Schedule</h2>
+            <div>
+                <button id = "read-me" type="button" onclick="displayResult()">READ ME!</button>
+                <button id = "theme-link" type="button" onclick="changeStyle()">Change Style</button>
+                <br/>
+                <p>Time Used: 2 hours 5 minutes</p>
+            </div>
+
+             <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Date</th>
+                        <th>Lecture</th>
+                        <th>Topic</th>
+                        <th>Hwk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Wed<br>Jan. 29</td>
+                        <td>Lecture<br>1</td>
+                        <td>
+                            Introduction.<br>
+                            Step-by-step hands-on activities<br>
+                            Git and GitHub<br>
+                            Starting Hw1
+                        </td>
+                         <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Wed<br>Feb. 5</td>
+                        <td>Lecture 2</a></td>
+                        <td>
+                            W<sub>3</sub>Schools Tutorials:<br>
+                            CSS sytling<br>
+                            Interactive JavaScript buttons
+                        </td>
+                        <td>Ex 1</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function displayResult() {
+          const header = document.getElementById("read-me");
+          header.innerHTML = "Homework submitted one day earlier (Monday by midnight) get 10% extra credit.";
+        }
+    </script>
+
+    <script>
+        let currentStyle = 1;
+         function changeStyle() {
+            const stylesheet = document.getElementById("theme-link");
+            if (currentStyle === 1) {
+                stylesheet.href = "darkMode.css";
+                currentStyle = 2 ;
+            } else {
+                stylesheet.href = "lightMode.css";
+                currentStyle = 1;
+            }
+        }
+    </script>
+
+</body>
+</html>
