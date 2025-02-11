@@ -1,103 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<meta charset="utf-8"> 
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinner of the Week</title>
-    <link id="theme-link" rel="stylesheet" href="lightMode.css">
+  <title>Cook Book</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="theme-link" rel="stylesheet" href="cookMode.css">
+
 </head>
+<header>
+  <h1 id="myHeader">COOK BOOK</h1>
+  <div class="button-container">
+    <button class="show-dishes-btn" type="button" onclick="toggleDisplay()">Show Final Dishes! 🍳</button>
+  </div>
+</header>
+
+<nav class="nav-bar">
+  <ul>
+    <li><a href="#tomato-eggs">Tomatoes with Eggs</a></li>
+    <li><a href="#egg-pancake">Egg Pancake</a></li>
+    <li><a href="#congee">Pork Congee</a></li>
+    <li><a href="../Tutorial/tutorial.html">Tutorial</a></li>
+    <li><a href="../Tutorial/technical.html">Technical</a></li>
+  </ul>
+</nav>
+
 <body>
-    <div class="header">
-        <div class="course-info">
-            <div>
-                <p class="course-code">CSC209</p>
-                <p class="semester">Spring 2025</p>
-                <p class="instructor">Ileana<br>Streinu</p>
-                <hr />
-                <div class="navigation">
-                    <a href="https://zihanlyu.github.io/CSC209/startPage.html">Start Page</a>
-                    <a href="https://zihanlyu.github.io/CSC209/Hwk/Hw2/tutorial.html">Tutorial</a>
-                    <a href="https://zihanlyu.github.io/CSC209/Hwk/Hw2/creative.html">Creative</a>
-                    <hr />
-                    <a href="https://www.w3schools.com/html/html_images.asp">W<sup>3</sup>Schools</a>
-                    <a href="https://wtf.tw/ref/duckett.pdf">HTML&CSS Design and Build Websites</a>
+<div class="recipy" id="tomato-eggs">
+<h2>西红柿炒鸡蛋</h2>
+<h3>Tomatoes with Scrambled Eggs</h3>
+<table>
+    <tr>
+        <th>Ingredient</th>
+        <th>Amount</th>
+    </tr>
+    <tr>
+        <td>Tomatoes</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Eggs</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Salt</td>
+        <td>1 pinch</td>
+    </tr>
+    <tr>
+        <td>Sugar</td>
+        <td>1 pinch</td>
+    </tr>
+</table>
+<div id="recipe1-images">
+    <img src="Images/tomato.png" alt="tomato" width="15%">
+    <img src="Images/egg.png" alt="egg" width="15%">
+</div>
+</div> 
 
-            </div>
-        </div>
-    </div>
+<div class="recipy" id="egg-pancake">
+<h2>鸡蛋饼</h2>
+<h3>Egg Pancake</h3>
+<table>
+    <tr>
+        <th>Ingredient</th>
+        <th>Amount</th>
+    </tr>
+    <tr>
+        <td>Eggs</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Wheat Flour</td>
+        <td>1 lb</td>
+    </tr>
+    <tr>
+        <td>Spring Onion</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Salt and Black Pepper</td>
+        <td>1 pinch</td>
+    </tr>
+</table>
+<div id="recipe2-images">
+    <img src="Images/egg.png" alt="egg" width="15%">
+    <img src="Images/flour.png" alt="flour" width="15%">
+</div>
+</div>
 
+<div class="recipy" id="congee">
+<h2>皮蛋瘦肉粥</h2>
+<h3>Thousand-year-old Egg & Pork Congee</h3>
+<table>
+    <tr>
+        <th>Ingredient</th>
+        <th>Amount</th>
+    </tr>
+    <tr>
+        <td>Thousand-year-old Eggs</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Pork</td>
+        <td>0.5 lb</td>
+    </tr>
+    <tr>
+        <td>Jasmine Rice</td>
+        <td>1 lb</td>
+    </tr>
+</table>
+<div id="recipe3-images">
+    <img src="Images/century_egg.png" alt="century_egg" width="15%">
+    <img src="Images/pork.png" alt="pork" width="15%">
+    <img src="Images/rice.png" alt="rice" width="15%">
+</div>
+</div>
 
-    <div class="main-content">
-        <div class="schedule-section" style="text-align: center;">
-            <img src="https://zihanlyu.github.io/CSC209/Images/smithcollege.jpg" alt="Smith College" class="college-logo">
-            <h1 class="page-title">209 Web Programming</h1>
-            <h2>Schedule</h2>
-            <div>
-                <button id = "read-me" type="button" onclick="displayResult()">READ ME!</button>
-                <button id = "theme-link" type="button" onclick="changeStyle()">Change Style</button>
-                <br/>
-                <p>Time Used: 2 hours 5 minutes</p>
-            </div>
+<script>
+  let showingDishes = false;
+  const originalImages = {
+    recipe1: document.getElementById("recipe1-images").innerHTML,
+    recipe2: document.getElementById("recipe2-images").innerHTML,
+    recipe3: document.getElementById("recipe3-images").innerHTML
+  };
 
-             <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Week</th>
-                        <th>Date</th>
-                        <th>Lecture</th>
-                        <th>Topic</th>
-                        <th>Hwk</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Wed<br>Jan. 29</td>
-                        <td>Lecture<br>1</td>
-                        <td>
-                            Introduction.<br>
-                            Step-by-step hands-on activities<br>
-                            Git and GitHub<br>
-                            Starting Hw1
-                        </td>
-                         <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Wed<br>Feb. 5</td>
-                        <td>Lecture 2</a></td>
-                        <td>
-                            W<sub>3</sub>Schools Tutorials:<br>
-                            CSS sytling<br>
-                            Interactive JavaScript buttons
-                        </td>
-                        <td>Ex 1</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <script>
-        function displayResult() {
-          const header = document.getElementById("read-me");
-          header.innerHTML = "Homework submitted one day earlier (Monday by midnight) get 10% extra credit.";
-        }
-    </script>
-
-    <script>
-        let currentStyle = 1;
-         function changeStyle() {
-            const stylesheet = document.getElementById("theme-link");
-            if (currentStyle === 1) {
-                stylesheet.href = "darkMode.css";
-                currentStyle = 2 ;
-            } else {
-                stylesheet.href = "lightMode.css";
-                currentStyle = 1;
-            }
-        }
-    </script>
+  function toggleDisplay() {
+    const header = document.getElementById("myHeader");
+    const button = document.querySelector(".show-dishes-btn");
+    const recipe1Images = document.getElementById("recipe1-images");
+    const recipe2Images = document.getElementById("recipe2-images");
+    const recipe3Images = document.getElementById("recipe3-images");
+    
+    if (!showingDishes) {
+      // Show final dishes
+      header.innerHTML = "Bon Appétit!";
+      header.style.fontSize = "70px";
+      header.style.color = "rgb(170, 40, 170)";
+      button.innerHTML = "Show Ingredients! &#x1F4DD";
+      
+      recipe1Images.innerHTML = '<img src="Images/scrambled_egg_with_tomato.jpg" alt="Scrambled Eggs with Tomatoes" width="30%">';
+      recipe2Images.innerHTML = '<img src="Images/egg_pancake.jpg" alt="Egg Pancake" width="30%">';
+      recipe3Images.innerHTML = '<img src="Images/congee.jpg" alt="Congee" width="30%">';
+    } else {
+      // Show ingredients
+      header.innerHTML = "COOK BOOK";
+      header.style.fontSize = "50px";
+      header.style.color = "black";
+      button.innerHTML = "Show Final Dishes! &#127859";
+      
+      recipe1Images.innerHTML = originalImages.recipe1;
+      recipe2Images.innerHTML = originalImages.recipe2;
+      recipe3Images.innerHTML = originalImages.recipe3;
+    }
+    
+    showingDishes = !showingDishes;
+  }
+</script>
 
 </body>
 </html>
