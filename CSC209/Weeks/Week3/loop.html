@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loops</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* p{
+                color:gray
+            } */
+            body {
+                line-height: 1.5;
+            }
+    
+            p.small {
+                line-height: 0.2;
+            }
+            h2{
+                color:palevioletred
+            }
+        </style>
+    </head>
+<body>
+
+    <h3>Counting Number Loop</h3>
+    <p id="demo"></p>
+
+    <script>
+    let text = "";
+    
+    for (let i = 0; i < 5; i++) {
+      text += "The number is " + i + "<br>";
+    }
+    
+    document.getElementById("demo").innerHTML = text;
+    </script>
+
+    <h3>The for in statement loops through the properties of an object:</h3>
+
+    <p id="person"></p>
+
+    <script>
+    const person = {fname:"Zihan", lname:"Lyu", age:21}; 
+
+    let txt = "";
+    for (let x in person) {
+    txt += person[x] + " ";
+    }
+
+    document.getElementById("person").innerHTML = txt;
+    </script>
+
+
+</body>
+</html>

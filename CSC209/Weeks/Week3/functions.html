@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* p{
+            color:gray
+        } */
+        body {
+            line-height: 1.5;
+        }
+
+        p.small {
+            line-height: 0.2;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>JavaScript Functions</h3>
+
+    <p>Important: Accessing a function without () returns the function and not the function result</p>
+    <p id="demo"></p>
+
+    <script>
+    function toCelsius(f) {
+    return (5/9) * (f-32);
+    }
+
+    let value = toCelsius(77);
+    document.getElementById("demo").innerHTML = value;
+    </script>
+
+    <h3>Functions Used as Variable Values</h3>
+    <span class="jscolor" style="color:black">
+        <span class="jskeywordcolor" style="color:#005cc5">
+        let</span> x = toCelsius(<span class="jsnumbercolor" style="color:#905">77</span>);<br>
+        <span class="jskeywordcolor" style="color:#005cc5">
+        let</span> text = <span class="jsstringcolor" style="color:green">
+        "The temperature is "</span> + x + <span class="jsstringcolor" style="color:green">" Celsius"</span>;
+        <span class="jsnumbercolor" style="color:#905"></span>
+    </span>
+
+</body>
+</html> 

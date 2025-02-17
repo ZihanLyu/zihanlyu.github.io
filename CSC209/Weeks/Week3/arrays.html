@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* p{
+                color:gray
+            } */
+            body {
+                line-height: 1.5;
+            }
+    
+            p.small {
+                line-height: 0.2;
+            }
+            h2{
+                color:palevioletred
+            }
+        </style>
+    </head>
+<body>
+
+<h3>Prints everything inside the Array</h3>
+
+<p id="cars"></p>
+
+<script>
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("cars").innerHTML = cars;
+</script>
+
+
+<h3>Length Property</h3>
+
+<p id="fruit"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let size = fruits.length;
+document.getElementById("demo").innerHTML = size;
+</script>
+
+<h3>The length Property</h3>
+
+<h3>Sort the array</h3>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo1").innerHTML = points;  
+
+points.sort(function(a, b){return a - b});
+document.getElementById("demo2").innerHTML = points;
+</script>
+
+</body>
+</html>

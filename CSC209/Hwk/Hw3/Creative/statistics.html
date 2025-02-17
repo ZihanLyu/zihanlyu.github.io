@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pomodoro Statistics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link id="theme-link" rel="stylesheet" href="statistics.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <h1>&#127813 Your Statistics</h1>
+            <div>
+                <button class="button" onclick="location.href='pomodoroTimer.html'">Back to Timer</button>
+                <button class="button" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Pomodoros</h3>
+                <p id="total-pomodoros">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Minutes</h3>
+                <p id="total-minutes">0</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="weeklyChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="distributionChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Check if user is logged in
+        const currentUser = localStorage.getItem('currentUser');
+        if (!currentUser) {
+            window.location.href = 'login.html';
+        }
+
+        function logout() {
+            localStorage.removeItem('currentUser');
+            window.location.href = 'login.html';
+        }
+
+        function getUserStats() {
+            const users = JSON.parse(localStorage.getItem('users')) || {};
+            const user = users[currentUser];
+            return user?.tasks || [];
+        }
+
+        function updateStats() {
+            const tasks = getUserStats();
+            
+            // Update basic stats
+            document.getElementById('total-pomodoros').textContent = tasks.length;
+            const totalMinutes = tasks.reduce((acc, task) => acc + task.duration, 0);
+            document.getElementById('total-minutes').textContent = totalMinutes;
+
+            // Create weekly chart
+            const weeklyData = {};
+            const now = new Date();
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date(now);
+                date.setDate(date.getDate() - i);
+                weeklyData[date.toLocaleDateString()] = 0;
+            }
+
+            tasks.forEach(task => {
+                const date = new Date(task.timestamp).toLocaleDateString();
+                if (weeklyData[date] !== undefined) {
+                    weeklyData[date]++;
+                }
+            });
+
+            new Chart(document.getElementById('weeklyChart'), {
+                type: 'line',
+                data: {
+                    labels: Object.keys(weeklyData),
+                    datasets: [{
+                        label: 'Pomodoros Completed',
+                        data: Object.values(weeklyData),
+                        borderColor: '#f87070',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Weekly Activity',
+                            color: '#d7e0ff'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { color: '#d7e0ff' }
+                        },
+                        x: {
+                            ticks: { color: '#d7e0ff' }
+                        }
+                    }
+                }
+            });
+
+            // Create distribution chart
+            const distribution = {
+                'Pomodoro': tasks.filter(t => t.type === 'pomodoro').length,
+                'Short Break': tasks.filter(t => t.type === 'short').length,
+                'Long Break': tasks.filter(t => t.type === 'long').length
+            };
+
+            new Chart(document.getElementById('distributionChart'), {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(distribution),
+                    datasets: [{
+                        data: Object.values(distribution),
+                        backgroundColor: ['#f87070', '#70c1b3', '#b39ddb']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Timer Distribution',
+                            color: '#d7e0ff'
+                        },
+                        legend: {
+                            labels: {
+                                color: '#d7e0ff'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        updateStats();
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f5ec;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-bottom: 60px;
+    padding-top: 80px;
+}
+
+header {
+    background-color: white;
+    color: #a66554;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #ebe3d1;
+    padding: 1rem;
+    margin-top: 1.8rem;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-left: 2rem; 
+}
+
+nav a {
+    color: #593f1e;
+    text-decoration: none;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebe6d1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #593f1e;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1e8d5;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+article {
+    background-color: #ebe6d1;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+aside {
+    background-color: #ebe6d1;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+ol {
+    padding-left: 18px;
+}
+ul {
+    padding-left: 18px;
+}
+a {
+    color: #593f1e;
+    text-decoration: none;
+}
+.rounded-figure img {
+    border-radius: 50%;
+}
+p {
+    line-height: 3;
+    font-size: 18px;
+}
+h3 {
+    line-height: 3;
+}

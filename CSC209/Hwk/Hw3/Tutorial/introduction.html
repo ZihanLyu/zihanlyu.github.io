@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='Images/pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="./Images/pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='Images/pic_bulboff.gif'">Turn off the light</button>
+
+<h2>External JavaScript</h2>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p>This example links to "myScript.js".</p>
+<p>(myFunction is stored in "myScript.js")</p>
+
+<script src="myScript.js"></script>
+<h3>JavaScript Line Length and Line Breaks</h3>
+<p>For best readability, programmers often like to avoid code lines longer than 80 characters.</p>
+
+<h3>JavaScript Code Blocks</h3>
+<p>JavaScript statements can be grouped together in code blocks, inside curly brackets {...}.</p>
+
+</body>
+</html>

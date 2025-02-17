@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>If</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* p{
+                color:gray
+            } */
+            body {
+                line-height: 1.5;
+            }
+    
+            p.small {
+                line-height: 0.2;
+            }
+            h2{
+                color:palevioletred
+            }
+        </style>
+    </head>
+<body>
+
+    <h3>Time-based Greeting</h3>
+    <p id="demo"></p>
+
+    <script>
+        const hour = new Date().getHours();
+        
+        if (hour >= 6 && hour < 12) {
+            document.getElementById("demo").innerHTML = "Good morning!";
+        } else if (hour >= 12 && hour < 18) {
+            document.getElementById("demo").innerHTML = "Good day!";
+        } else if (hour >= 18 && hour < 19) {
+            document.getElementById("demo").innerHTML = "Good evening!";
+        } else {
+            document.getElementById("demo").innerHTML = "Good night!";
+        }
+    </script>
+
+</body>
+</html>
