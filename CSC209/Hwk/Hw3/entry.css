@@ -27,7 +27,7 @@ header {
 
 header h1 {
     font-family: 'Brush Script MT', cursive;
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -42,13 +42,15 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: flex-start;
-    gap: 2rem;
-    padding-left: 2rem; 
+    gap: 1rem;
+    padding-left: 1rem;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: #593f1e;
     text-decoration: none;
+    padding: 0.5rem;
 }
 
 /* Dropdown Styles */
@@ -85,7 +87,7 @@ nav a {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -107,23 +109,75 @@ aside {
     border-radius: 5px;
 }
 
-ol {
+ol, ul {
     padding-left: 18px;
 }
-ul {
-    padding-left: 18px;
-}
+
 a {
     color: #593f1e;
     text-decoration: none;
 }
+
 .rounded-figure img {
     border-radius: 50%;
+    max-width: 100%;
+    height: auto;
 }
+
 p {
     line-height: 2;
-    font-size: 18px;
+    font-size: clamp(16px, 2vw, 18px);
 }
+
 h3 {
     line-height: 2;
+}
+
+/* Media Queries */
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    nav ul {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+    }
+
+    .main-content {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    article, aside {
+        padding: 1rem;
+    }
 }
