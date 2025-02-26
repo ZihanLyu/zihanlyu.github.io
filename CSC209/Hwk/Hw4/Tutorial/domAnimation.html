@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM CSS Animation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+    <style>
+        #container {
+          width: 400px;
+          height: 400px;
+          position: relative;
+          background: yellow;
+        }
+        #animate {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          background-color: red;
+        }
+    </style>
+
+    <p><button onclick="myMove()">Click Me</button></p> 
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+    function myMove() {
+        let id = null;
+        const elem = document.getElementById("animate");   
+        let pos = 0;
+        let step = 0;
+        
+        // Reset position
+        elem.style.top = "0px";
+        elem.style.left = "0px";
+        
+        clearInterval(id);
+        id = setInterval(frame, 5);
+        
+        function frame() {
+            if (pos >= 350) {
+                pos = 0;
+                step++;
+                if (step >= 4) {
+                    clearInterval(id);
+                    return;
+                }
+            }
+            
+            pos += 1;
+            
+            switch(step) {
+                case 0: // Move right
+                    elem.style.left = pos + "px";
+                    break;
+                case 1: // Move down
+                    elem.style.top = pos + "px";
+                    break;
+                case 2: // Move left
+                    elem.style.left = (350 - pos) + "px";
+                    break;
+                case 3: // Move up
+                    elem.style.top = (350 - pos) + "px";
+                    break;
+            }
+        }
+    }
+    </script>
+</body>
+</html>

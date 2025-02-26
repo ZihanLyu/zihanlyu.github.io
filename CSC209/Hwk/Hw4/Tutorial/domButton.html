@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Button</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <p>Click the button to create an Input Button with a ":)" text.</p>
+
+    <button onclick="myFunction()">Try it</button>
+    
+    <script>
+    function myFunction() {
+      var x = document.createElement("INPUT");
+      x.setAttribute("type", "button");
+      x.setAttribute("value", ":)");
+      document.body.appendChild(x);
+    }
+    </script>
+
+</body>
+</html> 

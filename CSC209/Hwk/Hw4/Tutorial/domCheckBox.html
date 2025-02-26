@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Check Box</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <h3>A demonstration of how to access a Checkbox</h3>
+
+    Checkbox: <input type="checkbox" id="myCheck">
+    
+    <p>Click the "Try it" button to check the checkbox.</p>
+    
+    <button onclick="myFunction()">Try it</button>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myCheck");
+      x.checked = true;
+    }
+    </script>
+
+    <p>Click the button to create a Checkbox.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+    function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "checkbox");
+    document.body.appendChild(x);
+    }
+    </script>
+
+</body>
+</html> 

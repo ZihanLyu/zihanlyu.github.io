@@ -1,0 +1,91 @@
+<!--Test-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Date</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .error {
+                color: red;
+                font-size: 14px;
+                margin-top: 5px;
+                display: none;
+            }
+            input:invalid {
+                border-color: red;
+            }
+        </style>
+    </head>
+<body>
+    <h3>Email Field Validation Demo</h3>
+
+    <form id="emailForm" onsubmit="return false;">
+        E-mail: <input 
+            type="email" 
+            id="myEmail" 
+            maxlength="30"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            required 
+        />
+        <div id="errorMessage" class="error"></div>
+    </form>
+
+    <p>Click the button to validate and get the email address.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+    function validateEmail(email) {
+        // Check length
+        if (email.length > 30) {
+            return "Email must be less than 30 characters";
+        }
+        
+        // Check for @ and domain
+        if (!email.includes('@')) {
+            return "Email must contain @";
+        }
+        
+        // Split email into parts
+        const parts = email.split('@');
+        if (parts.length !== 2) {
+            return "Invalid email format";
+        }
+        
+        // Check domain has at least one dot
+        if (!parts[1].includes('.')) {
+            return "Domain must contain a dot (e.g., .com, .org)";
+        }
+        
+        // If all checks pass
+        return "";
+    }
+
+    function myFunction() {
+        const emailInput = document.getElementById("myEmail");
+        const errorDiv = document.getElementById("errorMessage");
+        const email = emailInput.value;
+        
+        // Reset error message
+        errorDiv.style.display = "none";
+        
+        // Validate email
+        const errorMessage = validateEmail(email);
+        
+        if (errorMessage) {
+            // Show error message
+            errorDiv.textContent = errorMessage;
+            errorDiv.style.display = "block";
+            document.getElementById("demo").innerHTML = "";
+        } else {
+            // Show valid email
+            document.getElementById("demo").innerHTML = email;
+        }
+    }
+    </script>
+
+</body>
+</html>

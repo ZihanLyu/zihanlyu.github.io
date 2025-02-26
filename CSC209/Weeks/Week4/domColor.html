@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Color</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <h3>Access a Color picker</h3>
+
+    Select your favorite color: <input type="color" id="myColor">
+    
+    <p>Click the "Try it" button to get the color of the color picker.</p>
+    
+    <button onclick="myFunction()">Try it</button>
+    
+    <p><b>Note:</b> type="color" is not supported in Internet Explorer 11 and earlier versions or Safari 9.1 and earlier versions.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myColor").value;
+      document.getElementById("demo").innerHTML = x;
+    }
+    </script>
+<hr>
+    <p>Click the button to create a Color picker.</p>
+
+    <button onclick="myFunction()">Add</button>
+
+    <script>
+    function myFunction() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "color");
+    document.body.appendChild(x);
+    }
+    </script>
+
+</body>
+</html> 

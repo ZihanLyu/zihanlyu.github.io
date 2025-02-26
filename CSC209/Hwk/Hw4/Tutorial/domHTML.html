@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+
+    <h3 id="id01">Old Heading</h3>
+
+    <script>
+    const element = document.getElementById("id01");
+    element.innerHTML = "New Heading";
+    </script>
+    
+    <p>JavaScript changed "Old Heading" to "New Heading".</p>
+
+    <h3><b>document.write()</b> can be used to write directly to the HTML output stream:</h3>
+    <script>
+        document.write(Date());
+    </script>
+
+</body>
+</html> 
