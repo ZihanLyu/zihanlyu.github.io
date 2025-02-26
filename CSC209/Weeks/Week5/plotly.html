@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Plotly</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+<body>
+
+<h2>JavaScript Plotly</h2>
+
+<h3>Plotly.js Bar Plot Vertical</h3>
+
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+<script>
+const xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yArray = [55, 49, 44, 24, 15];
+
+const data = [{
+  x:xArray,
+  y:yArray,
+  type:"bar",
+  orientation:"v", /** v represent vertical bar, h represent horizontal bar*/
+  marker: {color:"rgba(200,80,255,0.6)"}
+}];
+
+const layout = {title:"World Wide Wine Production"};
+
+Plotly.newPlot("myPlot", data, layout);
+</script>
+
+<h3>Plotly.js Bar Plot Horizontal</h3>
+<div id="myPlot2" style="width:100%;max-width:700px"></div>
+
+<script>
+const xArray2 = [55, 49, 44, 24, 15];
+const yArray2 = ["Italy ", "France ", "Spain ", "USA ", "Argentina "];
+
+const data2 = [{
+  x:xArray2,
+  y:yArray2,
+  type:"bar",
+  orientation:"h",
+  marker: {color:"rgba(0,255,150,0.6)"}
+}];
+
+const layout2 = {title:"World Wide Wine Production"};
+
+Plotly.newPlot("myPlot2", data2, layout2);
+</script>
+
+<h3>Pie Chart</h3>
+<div id="myPlot3" style="width:100%;max-width:700px"></div>
+
+<script>
+const xArray3 = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yArray3 = [55, 49, 44, 24, 15];
+
+const layout3 = {title:"World Wide Wine Production"};
+
+const data3 = [{labels:xArray3, values:yArray3, type:"pie"}];
+
+Plotly.newPlot("myPlot3", data3, layout3);
+</script>
+
+<h3>Donut Chart</h3>
+<div id="myPlot4" style="width:100%;max-width:700px"></div>
+
+<script>
+const xArray4 = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yArray4 = [55, 49, 44, 24, 15];
+
+const layout4 = {title:"World Wide Wine Production"};
+
+const data4 = [{labels:xArray4, values:yArray4, hole:.4, type:"pie"}];
+
+Plotly.newPlot("myPlot4", data4, layout4);
+</script>
+
+<h3>Plotting Equations</h3>
+<div id="myPlot5" style="width:100%;max-width:700px"></div>
+
+<script>
+let exp = "Math.sin(x)";
+
+// Generate values
+const xValues5 = [];
+const yValues5 = [];
+for (let x = 0; x <= 10; x += 0.1) {
+  xValues5.push(x);
+  yValues5.push(eval(exp));
+}
+
+// Display using Plotly
+const data5 = [{x:xValues5, y:yValues5, mode:"lines"}];
+const layout5 = {title: "y = " + exp};
+Plotly.newPlot("myPlot5", data5, layout5);
+</script>
+
+<h3>Markers Type</h3>
+<div id="myPlot6" style="width:100%;max-width:700px"></div>
+
+<script>
+let exp6 = "Math.cos(x)";
+
+// Generate values
+const xValues6 = [];
+const yValues6 = [];
+for (let x = 0; x <= 10; x += 0.2) {
+  xValues6.push(x);
+  yValues6.push(eval(exp));
+}
+
+// Display using Plotly
+const data6 = [{x:xValues6, y:yValues6, mode:"markers"}];
+const layout6 = {title: "y = " + exp6};
+Plotly.newPlot("myPlot6", data6, layout6);
+</script>
+
+<h3>Scatter Plot</h3>
+
+<div id="myPlot8" style="width:100%;max-width:700px"></div>
+
+<script>
+const xArray8 = [50,60,70,80,90,100,110,120,130,140,150];
+const yArray8 = [7,8,8,9,9,9,10,11,14,14,15];
+
+const data8 = [{
+  x: xArray8,
+  y: yArray8,
+  mode:"lines"
+}];
+
+const layout8 = {
+  xaxis: {range: [40, 160], title: "Square Meters"},
+  yaxis: {range: [5, 16], title: "Price in Millions"},  
+  title: "House Prices vs. Size"
+};
+
+Plotly.newPlot("myPlot8", data8, layout8);
+</script>
+
+<h3>Bubble Plots</h3>
+<div id="myPlot9" style="width:100%;max-width:700px"></div>
+
+<script>
+const xArray9 = [1,2,3,4];
+const yArray9 = [10,20,30,40];
+
+const trace1 = {
+  x: xArray9,
+  y: yArray9,
+  mode: 'markers',
+  marker: {
+    color: ['red', 'green',  'blue', 'orange'],
+    size: [20, 30, 40, 50]
+  }
+};
+
+const trace2 = {
+  x: [1, 2, 3, 4],
+  y: [15, 30, 45, 60],
+  mode: 'markers',
+  marker: {
+    color: 'rgb(31, 119, 180)',
+    size: 18,
+    symbol: ['circle', 'square', 'diamond', 'cross']
+  },
+};
+
+const data9 = [trace1, trace2];
+
+const layout9 = {
+  title: "Plotting Bubbles"
+};
+
+Plotly.newPlot('myPlot9', data9, layout9);
+</script>
+</script>
+</body>
+</html>
