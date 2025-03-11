@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var system = new ParticleSystem("pointCanvas");
 
     function generateParticles() {
-        NRPTS = parseInt(document.getElementById("pointCount").value) || 3;
+        NRPTS = parseInt(document.getElementById("pointCount").value);
         system.generateParticles(NRPTS);
         system.draw();
     }
