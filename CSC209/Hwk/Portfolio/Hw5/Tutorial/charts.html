@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Charts.js</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
+<body>
+
+<h2>JavaScript Charts</h2>
+
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yValues = [55, 49, 44, 24, 15];
+const barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "World Wine Production 2018"
+    },
+    scales: {
+      yAxes: [{ticks: {min: 10, max:60}}]
+    }
+  }
+});
+</script>
+
+<h3>Change selected bar color</h3>
+<canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+
+<script>
+const barColors2 = ["blue", , "blue", , "blue"];
+
+new Chart("myChart2", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors2,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }],
+    }
+  }
+});
+</script>
+
+<h3>Horizontal</h3>
+<canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+
+<script>
+
+new Chart("myChart3", {
+  type: "horizontalBar",
+  data: {
+  labels: xValues,
+  datasets: [{
+    backgroundColor: barColors,
+    data: yValues
+  }]
+},
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "World Wine Production 2018"
+    },
+    scales: {
+      xAxes: [{ticks: {min: 10, max:60}}]
+    }
+  }
+});
+</script>
+
+<h3>Pie Charts</h3>
+<canvas id="myChart4" style="width:100%;max-width:600px"></canvas>
+
+<script>
+const barColors4 = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart4", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors4,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
+</script>
+
+<h3>Donut Chart</h3>
+<canvas id="myChart5" style="width:100%;max-width:600px"></canvas>
+
+<script>
+
+new Chart("myChart5", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors4,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
+</script>
+
+<h3>Multiple Lines</h3>
+<canvas id="myChart6" style="width:100%;max-width:600px"></canvas>
+
+<script>
+const xValues5 = [100,200,300,400,500,600,700,800,900,1000];
+
+new Chart("myChart6", {
+  type: "line",
+  data: {
+    labels: xValues5,
+    datasets: [{ 
+      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      borderColor: "red",
+      fill: false
+    }, { 
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      borderColor: "green",
+      fill: false
+    }, { 
+      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+      borderColor: "blue",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Events</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <h3>The onclick Attribute</h3>
+
+    <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+    <hr>
+    <h3>The onchange Attribute</h3>
+
+    Enter your name: <input type="text" id="fname" onchange="upperCase()">
+    <p>When you leave the input field, a function transforms the input to upper case.</p>
+
+    <script>
+    function upperCase() {
+    const x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+    }
+    </script>
+    <hr>
+    <h2>The onmouseover Attribute</h2>
+    <!--Example 1--> 
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+    style="background-color:paleturquoise;width:90px;height:20px;padding:40px;">
+    Mouse Over Me</div>
+
+    <script>
+    function mOver(obj) {
+    obj.innerHTML = "Uh-Ha!"
+    }
+
+    function mOut(obj) {
+    obj.innerHTML = "Mouse Over"
+    }
+    </script>
+    <!--Example 2--> 
+    <br>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+    style="background-color:orange;width:90px;height:20px;padding:40px;">
+    Click Me</div>
+
+    <script>
+    function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "Release Me";
+    }
+
+    function mUp(obj) {
+    obj.style.backgroundColor="#D94A38";
+    obj.innerHTML="Good";
+    }
+    </script>
+    <hr>
+    <!--Example 3--> 
+    <h1 onmouseover="style.color='red'"
+    onmouseout="style.color='black'">
+    Mouse over this text</h1>
+    <hr>
+    <!--Example 4--> 
+    <script>
+        function myFunction(x) {
+          x.style.background = "yellow";
+        }
+    </script>
+
+    <h2>The onfocus Attribute</h2>
+        
+    Enter your name: <input type="text" onfocus="myFunction(this)">
+        
+    <p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+    <!--Example 4--> 
+    <hr>
+    <p>onload</p>
+    <script>
+    function lighton() {
+        document.getElementById('myimage').src = ".//Images/bulbon.gif";
+    }
+    function lightoff() {
+        document.getElementById('myimage').src = ".//Images/bulboff.gif";
+    }
+    </script>
+
+    <h2>The onmousedown Attribute</h2>
+        
+    <img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src=".//Images/bulboff.gif" width="100" height="180" />
+        
+    <p>Click mouse and hold down!</p>
+
+</body>
+</html> 

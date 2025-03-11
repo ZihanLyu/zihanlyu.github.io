@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* p{
+            color:gray
+        } */
+        body {
+            line-height: 1.5;
+        }
+
+        p.small {
+            line-height: 0.2;
+        }
+    </style>
+</head>
+<body>
+
+<h3>JavaScript Variables can be declared in 4 ways:</h3>
+<ul>
+    <li>Automatically</li>
+    <li>Using <code style="color: red;">var</code></li>
+    <li>Using <code style="color: red;">let</code></li>
+    <li>Using <code style="color: red;">const</code></li>   
+</ul>
+
+<h3>When to Use var, let, or const?</h3>
+<p>1. Aways to <code style="color: red;">const</code> if:<br />
+    &emsp;- the value should not be changed<br />
+    &emsp;- the type should not be changed (Arrays and Objects)
+</p>
+<p>2. Only use <code style="color: red;">let</code> if:<br />
+    &emsp;- you can't use <code style="color: red;">const</code>
+</p>
+<p>3. Only use <code style="color: red;">var</code> if:<br />
+    &emsp;- you MUST support old browsers
+</p>
+
+<h3>Create a variable, assign a value to it, and display it:</h3>
+
+<p class="small">let carName = "Volvo";</p>
+<p class="small">document.getElementById("demo").innerHTML = carName;</p>
+
+<p id="demo"></p>
+<script>
+let carName = "Volvo";
+document.getElementById("demo").innerHTML = carName;
+</script>
+
+<h3>Re-Declaring JavaScript Variables</h3>
+<p>If you re-declare a JavaScript variable declared with <code style="color: red;">var</code>, it will not lose its value.</p>
+
+<h3>JavaScript Dollar Sign $</h3>
+<p>Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names</p>
+
+<h3>Same with JavaScript Underscore (_)</h3>
+
+</body>
+</html> 

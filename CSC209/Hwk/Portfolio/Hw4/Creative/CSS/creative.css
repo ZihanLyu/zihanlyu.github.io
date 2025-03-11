@@ -1,0 +1,133 @@
+#aquarium {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: linear-gradient(to bottom,#eed590,#87CEEB, #1E90FF, #00008B);
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.creature {
+    position: absolute;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+
+#fish {
+    transform: scaleX(1);
+}
+
+#turtle {
+    transform: scaleX(1);
+    /* transform: scaleY(2); */
+}
+
+#jellyfish {
+    transform: scaleX(1);
+}
+
+#crab {
+    transform: scaleX(1);
+}
+
+.controls {
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.creature-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.creature-control {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+select {
+    padding: 6px;
+    margin: 5px;
+}
+
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    animation: bubbleRise linear infinite;
+}
+
+.seaweed {
+    position: absolute;
+    bottom: 0;
+    background-color: #3a5f0b;
+    width: 8px;
+    border-radius: 4px;
+    animation: sway 5s ease-in-out infinite;
+    transform-origin: bottom;
+}
+/* According to the Reference */
+@keyframes bubbleRise {
+    0% { transform: translateY(0); opacity: 0; } /* start as transparent */
+    20% { opacity: 0.8; } /* gradually becomes visable */
+    100% { transform: translateY(-400px); opacity: 0; } /* fade out in the end */
+}
+
+@keyframes sway {
+    0% { transform: rotate(-5deg); } /* tilt left */
+    50% { transform: rotate(5deg); } /* at 50% duration of the animation tilt right */
+    100% { transform: rotate(-5deg); } 
+}
+
+h1 {
+    text-align: center;
+    color: #1E90FF;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+}
+
+nav {
+    padding: 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-left: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #593f1e;
+    text-decoration: none;
+    padding: 0.5rem;
+}

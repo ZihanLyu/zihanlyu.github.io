@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+    <title>Hw1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9f5ec;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-bottom: 60px;
+            padding-top: 80px;
+        }
+
+        header {
+            background-color: white;
+            color: #a66554;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background-color: #ebe3d1;
+            padding: 1rem;
+            margin-top: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            gap: 2rem;
+            padding-left: 2rem; 
+        }
+
+        nav a {
+            color: #593f1e;
+            text-decoration: none;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        article {
+            background-color: #ebe6d1;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        aside {
+            background-color: #ebe6d1;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+
+        ol {
+            padding-left: 18px;
+        }
+        ul {
+            padding-left: 18px;
+        }
+        a {
+            color: #593f1e;
+            text-decoration: none;
+        }
+        .rounded-figure img {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Homework 1 Home Page <span style='font-size:50px;'>&#128034;</span></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../../../startPage.html">Back To Start Page</a></li>
+            <li><a href="../TechnicalCreative/technicalCreative.html">Technical & Creative</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <main>
+            <section>
+                <h2>Components</h2>
+                <article style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3>Tutorials - 1 hour 50 minutes</h3>
+                        <ol>
+                            <li><a href="../../Hw1/Tutorial/blockAndInline.html">Block & Inline</a></li>
+                            <li><a href="../../Hw1/Tutorial/images.html">Images</a></li>
+                            <li><a href="../../Hw1/Tutorial/links.html">Links</a></li>
+                            <li><a href="../../Hw1/Tutorial/lists.html">Lists</a></li>
+                            <li><a href="../../Hw1/Tutorial/tables.html">Tables</a></li>
+                            <li><a href="../../../Weeks/Week1/Part1/index.html">Index</a></li>
+                            <li><a href="../../../Weeks/Week1/Part3/iframe.html">Iframe</a></li>
+                            <li><a href="../../../Weeks/Week1/Part3/semantics.html">Semantics</a></li>
+                            <li><a href="../../Hw1/Tutorial/quotations.html">Quotations</a></li>
+                            <li><a href="../../Hw1/Tutorial/emojis.html">Emojis</a></li>
+                        </ol>
+                    </div>
+                    <figure style="padding-left: 18px;" class="rounded-figure" >
+                        <img src="../Images/crab.jpg" alt="Picture of a crab" width="320">
+                    </figure>
+                </article>
+            
+                <article>
+                    <h3>Technical - 2 hour 15 minutes</h3>
+                    <h3>Creative - 2 hour 48 minutes</h3>
+                </article>
+                <br />
+                <address>
+                    Written by Zihan Lyu.<br>
+                    Contact:<br>
+                    &#128232 llyu69@smith.edu<br>
+                    112 Elm Street, Hopkins House, Northampton<br>
+                    01063, MA
+                </address>
+            </section>
+        </main>
+
+        <aside>
+            <figure>
+                <img src="../Images/squirrelStanding.png" alt="Picture of a Squirrel Standing" width="320"/>
+            </figure>
+            <hr>
+            <h3>References</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com/html/html_images.asp">W<sup>3</sup>Schools</a></li>
+                <li><a href="https://wtf.tw/ref/duckett.pdf">HTML&CSS Design and Build Websites</a></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>

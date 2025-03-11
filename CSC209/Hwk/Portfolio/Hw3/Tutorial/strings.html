@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* p{
+                color:gray
+            } */
+            body {
+                line-height: 1.5;
+            }
+    
+            p.small {
+                line-height: 0.2;
+            }
+            h2{
+                color:palevioletred
+            }
+        </style>
+    </head>
+<body>
+
+<h3>Defination</h3>
+<p>Strings are for <b>storing text</b>.</p>
+<p>Strings are written <b>with quotes</b></p>
+
+<p id="car"></p>
+
+<script>
+let carName1 = "Volvo XC60"; // Double quotes
+let carName2 = 'Volvo XC60'; // Single quotes
+
+document.getElementById("car").innerHTML =
+carName1 + " " + carName2; 
+</script>
+
+
+<h3>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</h3>
+
+<p id="demo"></p>
+
+<script>
+let answer1 = "It's alright";
+let answer2 = "His name is 'Johnny'";
+let answer3 = 'He is called "Johnny"'; 
+
+document.getElementById("demo").innerHTML =
+answer1 + "<br>" + answer2 + "<br>" + answer3; 
+</script>
+
+<h3>The length Property</h3>
+
+<p>The length of the string is:</p>
+<p id="length"></p>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("length").innerHTML = text.length;
+</script>
+
+</body>
+</html>

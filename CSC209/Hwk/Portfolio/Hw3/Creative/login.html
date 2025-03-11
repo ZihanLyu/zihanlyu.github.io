@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pomodoro Timer - Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="theme-link" rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h1>&#127813 Pomodoro Timer</h1>
+        <div id="error-message" class="error-message"></div>
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button class="button" onclick="login()">Login</button>
+            <button class="button" onclick="register()">Register</button>
+        </div>
+    </div>
+
+    <script>
+        function saveUserData(userData) {
+            let users = JSON.parse(localStorage.getItem('users')) || {};
+            users[userData.email] = userData;
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('error-message');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+
+        function register() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (!email || !password) {
+                showError('Please fill in all fields');
+                return;
+            }
+
+            const users = JSON.parse(localStorage.getItem('users')) || {};
+            
+            if (users[email]) {
+                showError('User already exists');
+                return;
+            }
+
+            const userData = {
+                email,
+                password,
+                tasks: []
+            };
+
+            saveUserData(userData);
+            localStorage.setItem('currentUser', email);
+            window.location.href = 'pomodoroTimer.html';
+        }
+
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (!email || !password) {
+                showError('Please fill in all fields');
+                return;
+            }
+
+            const users = JSON.parse(localStorage.getItem('users')) || {};
+            const user = users[email];
+
+            if (!user || user.password !== password) {
+                showError('Invalid email or password');
+                return;
+            }
+
+            localStorage.setItem('currentUser', email);
+            window.location.href = 'pomodoroTimer.html';
+        }
+    </script>
+</body>
+</html>

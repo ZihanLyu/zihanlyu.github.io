@@ -1,0 +1,83 @@
+#myContainer {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: yellow;
+    margin: 20px auto;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+#square1 {
+    background-color: red;
+    }
+
+#square2 {
+    background-color: blue;
+    }
+#square3 {
+    background-color: green;
+    }
+
+#square4 {
+    background-color: purple;
+    }
+
+.controls {
+    text-align: center;
+    margin: 20px;
+}
+
+.speed-controls {
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+select {
+    padding: 6px;
+    margin-left: 5px;
+}
+
+nav {
+    padding: 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-left: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #593f1e;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+h1 {
+    text-align: center;
+    color: #ff831e;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+}

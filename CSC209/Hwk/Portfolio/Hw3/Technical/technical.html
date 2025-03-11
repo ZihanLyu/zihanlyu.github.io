@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC252 - Spring 2025</title>
+    <link id="theme-link" rel="stylesheet" href="lightMode.css">
+</head>
+<body>
+    <div class="header">
+        <div class="course-info">
+            <div>
+                <p class="course-code">CSC209</p>
+                <p class="semester">Spring 2025</p>
+                <p class="instructor">Ileana<br>Streinu</p>
+                <hr />
+                <div class="navigation">
+                    <a href="../entry.html">Entry Page</a>
+                    <a href="../Tutorial/tutorial.html">Tutorial</a>
+                    <a href="../Creative/login.html">Creative</a>
+                    <hr />
+                    <a href="https://www.w3schools.com/html/html_images.asp">W<sup>3</sup>Schools</a>
+                    <a href="https://wtf.tw/ref/duckett.pdf">HTML&CSS Design and Build Websites</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-content">
+        <div class="schedule-section" style="text-align: center;">
+            <img src="../Technical/Images/portal_logo.png" alt="Smith College" class="college-logo">
+            <h1 class="page-title">209 Web Programming</h1>
+            <h2>Schedule</h2>
+            <div>
+                <button id = "read-me" type="button" onclick="displayResult()">READ ME!</button>
+                <button id = "theme-link" type="button" onclick="changeStyle()">Change Style</button>
+                <br/>
+                <p>Time Used: 1 hours 5 minutes</p>
+            </div>
+
+             <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Date</th>
+                        <th>Lecture</th>
+                        <th>Topic</th>
+                        <th>Hwk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Wed<br>Jan. 29</td>
+                        <td>Lecture<br>1</td>
+                        <td>
+                            Introduction.<br>
+                            Step-by-step hands-on activities<br>
+                            Git and GitHub<br>
+                            Starting Hw1
+                        </td>
+                         <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Wed<br>Feb. 5</td>
+                        <td>Lecture 2</a></td>
+                        <td>
+                            W<sub>3</sub>Schools Tutorials:<br>
+                            CSS sytling<br>
+                            Interactive JavaScript buttons
+                        </td>
+                        <td>Ex 1</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src=".//Images/spring.jpg" style="width:100%">
+                <div class="text">Spring</div>
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src=".//Images/summer.jpg" style="width:100%">
+                <div class="text" style="color: purple;">Summer</div>
+                </div>
+                
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src=".//Images/fall.jpg" style="width:100%">
+                <div class="text" >Fall</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src=".//Images/winter.jpg" style="width:100%">
+                    <div class="text" style="color: brown;">Winter</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                </div>
+                
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+                </script>
+        </div>
+    </div>
+
+    <script>
+        // function displayResult() {
+        //   const header = document.getElementById("read-me");
+        //   header.innerHTML = "Homework submitted one day earlier (Monday by midnight) get 10% extra credit.";
+        // }
+        function displayResult() {
+            const header = document.getElementById("read-me");
+            if (header.innerHTML === "READ ME!") {
+                header.innerHTML = "When Click on the button again, the text should be hidden!";
+            } else {
+                header.innerHTML = "READ ME!";
+            }
+        }
+    </script>
+
+    <script>
+        let currentStyle = 1;
+         function changeStyle() {
+            const stylesheet = document.getElementById("theme-link");
+            if (currentStyle === 1) {
+                stylesheet.href = "darkMode.css";
+                currentStyle = 2 ;
+            } else {
+                stylesheet.href = "lightMode.css";
+                currentStyle = 1;
+            }
+        }
+    </script>
+
+</body>
+</html>

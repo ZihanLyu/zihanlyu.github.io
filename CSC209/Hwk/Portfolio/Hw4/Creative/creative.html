@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emoji Aquarium</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/creative.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../entry.html">Entry Page</a></li>
+            <li><a href="../Tutorial/tutorial.html">Tutorial</a></li>
+            <li><a href="../Technical/technical.html">Technical</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Emoji Aquarium</h1>
+    
+    <div class="controls">
+        <button id="startAllBtn">Start Animation</button>
+        <button id="stopAllBtn">Stop Animation</button>
+        <button id="resetBtn">Reset Positions</button>
+        
+        <div class="creature-controls">
+            <div class="creature-control">
+                <label for="fishSpeed">&#128032 Fish Speed:</label>
+                <select id="fishSpeed">
+                    <option value="50">Slow</option>
+                    <option value="30" selected>Medium</option>
+                    <option value="10">Fast</option>
+                </select>
+                <label for="fishDirection">Direction:</label>
+                <select id="fishDirection">
+                    <option value="diagonal">Diagonal</option>
+                    <option value="horizontal">Horizontal</option>
+                    <option value="vertical">Vertical</option>
+                </select>
+            </div>
+            
+            <div class="creature-control">
+                <label for="turtleSpeed">&#128034 Turtle Speed:</label>
+                <select id="turtleSpeed">
+                    <option value="70" selected>Slow</option>
+                    <option value="40">Medium</option>
+                    <option value="20">Fast</option>
+                </select>
+                <label for="turtleDirection">Direction:</label>
+                <select id="turtleDirection">
+                    <option value="diagonal">Diagonal</option>
+                    <option value="horizontal" selected>Horizontal</option>
+                    <option value="vertical">Vertical</option>
+                </select>
+            </div>
+            
+            <div class="creature-control">
+                <label for="jellyfishSpeed">&#129724 Jellyfish Speed:</label>
+                <select id="jellyfishSpeed">
+                    <option value="60">Slow</option>
+                    <option value="40" selected>Medium</option>
+                    <option value="20">Fast</option>
+                </select>
+                <label for="jellyfishDirection">Direction:</label>
+                <select id="jellyfishDirection">
+                    <option value="diagonal">Diagonal</option>
+                    <option value="horizontal">Horizontal</option>
+                    <option value="vertical" selected>Vertical</option>
+                </select>
+            </div>
+            
+            <div class="creature-control">
+                <label for="crabSpeed">&#129408 Crab Speed:</label>
+                <select id="crabSpeed">
+                    <option value="80">Slow</option>
+                    <option value="50" selected>Medium</option>
+                    <option value="25">Fast</option>
+                </select>
+                <label for="crabDirection">Direction:</label>
+                <select id="crabDirection">
+                    <option value="diagonal">Diagonal</option>
+                    <option value="horizontal" selected>Horizontal</option>
+                    <option value="vertical">Vertical</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div id="aquarium">
+        <div id="fish" class="creature">&#128032</div>
+        <div id="turtle" class="creature">&#128034</div>
+        <div id="jellyfish" class="creature">&#129724</div>
+        <div id="crab" class="creature">&#129408</div>
+    </div>
+    
+    <script src="./JS/creative.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Events</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+
+    <h3>The onclick Attribute</h3>
+
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+
+    <h3>Its also possible to use JavaScript to accomplish this</h3>
+    <button onclick="displayDate()">The time is?</button>
+
+    <script>
+    function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+    }
+    </script>
+
+    <p id="demo"></p>
+
+</body>
+</html> 

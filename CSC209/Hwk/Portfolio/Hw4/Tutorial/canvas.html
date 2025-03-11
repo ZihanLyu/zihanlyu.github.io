@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+
+<h3>Empty Canvas</h3>
+<canvas id="myCanvas1" width="200" height="100" style="border:1px solid #000000;">
+    Sorry, your browser does not support canvas.
+</canvas>
+
+<h3>Draw a Rectangle</h3>
+<canvas id="myCanvas2" width="200" height="100" style="border:1px solid black;">
+    Sorry, your browser does not support canvas.
+</canvas>
+    
+    <script>
+    const canvas2 = document.getElementById("myCanvas2");
+    const ctx2 = canvas2.getContext("2d");
+    ctx2.fillStyle = "orange";
+    ctx2.fillRect(0,0,150,75);
+    </script>
+
+<canvas id="myCanvas3" width="200" height="100" style="border:1px solid black;">
+    Sorry, your browser does not support canvas.
+</canvas>
+
+    <script>
+    const canvas3 = document.getElementById("myCanvas3");
+    const ctx3 = canvas3.getContext("2d");
+    
+    ctx3.fillRect(0,0,150,75);
+    </script>
+
+<h3>Draw a Line</h3>
+<canvas id="myCanvas4" width="200" height="100" style="border:1px solid #000000;">
+    Sorry, your browser does not support canvas.
+    </canvas>
+    
+    <script>
+    // Create a canvas
+    const canvas4 = document.getElementById("myCanvas4");
+    const ctx4 = canvas4.getContext("2d");
+    
+    // Define a new path
+    ctx4.beginPath();
+    
+    // Set a start-point
+    ctx4.moveTo(0,0);
+    
+    // Set an end-point
+    ctx4.lineTo(200,100);
+    
+    // Draw it
+    ctx4.stroke();
+    </script>
+
+<h3>HTML5 Canvas - fillStyle</h3>
+
+<canvas id="myCanvas5" width="200" height="125" style="border:1px solid #000000;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas5 = document.getElementById("myCanvas5");
+const ctx5 = canvas5.getContext("2d");
+
+ctx5.fillStyle = "green";
+ctx5.fillRect(10,10, 100,100);
+</script>
+    
+<h3>HTML5 Canvas - strokeStyle</h3>
+
+<canvas id="myCanvas6" width="200" height="125" style="border:1px solid #000000;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas6 = document.getElementById("myCanvas6");
+const ctx6 = canvas6.getContext("2d");
+
+ctx6.strokeStyle = "pink";
+ctx6.lineWidth = 5;
+ctx6.strokeRect(10,10, 100,100);
+</script>
+
+<h3>HTML5 Canvas - Draw a Shape</h3>
+
+<canvas id="myCanvas7" width="200" height="125" style="border:1px solid #000000;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+// Create a canvas
+const canvas7 = document.getElementById("myCanvas7");
+const ctx7 = canvas7.getContext("2d");
+
+// Define a new path
+ctx7.beginPath();
+
+// Set start-point
+ctx7.moveTo(20,20);
+
+// Set sub-points
+ctx7.lineTo(100,20);
+ctx7.lineTo(175,100);
+ctx7.lineTo(20,100);
+
+// Set end-point
+ctx7.lineTo(20,20);
+
+// Draw it
+ctx7.stroke();
+</script>
+
+<h3>HTML5 Canvas - Draw a triangle</h3>
+
+<canvas id="myCanvas8" width="200" height="125" style="border:1px solid #000000;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+// Create a canvas:
+const canvas8 = document.getElementById("myCanvas8");
+const ctx8 = canvas8.getContext("2d");
+
+// Define a new path:
+ctx8.beginPath();
+
+// Define a start point
+ctx8.moveTo(100,20);
+
+// Define points
+ctx8.lineTo(180,100);
+ctx8.lineTo(20,100);
+ctx8.lineTo(100,20);
+
+// Draw it
+ctx8.stroke();
+</script>
+
+<h3>HTML5 Canvas - Draw Shapes</h3>
+
+<canvas id="myCanvas9" width="200" height="125" style="border:1px solid #000000;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+// Create a canvas:
+const canvas9 = document.getElementById("myCanvas9");
+const ctx9 = canvas9.getContext("2d");
+
+// Define a new path:
+ctx9.beginPath();
+
+// Define a rectangle
+ctx9.moveTo(20,20);
+ctx9.lineTo(180,20);
+ctx9.lineTo(180,100);
+ctx9.lineTo(20,100);
+ctx9.lineTo(20,20);
+
+// Define a triangle 
+ctx9.moveTo(100,20);
+ctx9.lineTo(180,100);
+ctx9.lineTo(20,100);
+ctx9.lineTo(100,20);
+
+// Draw it
+ctx9.strokeStyle = "purple";
+ctx9.stroke();
+</script>
+
+<h3>HTML5 Canvas - rect()</h3>
+
+<canvas id="myCanvas10" width="300" height="150" style="border:1px solid black">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas10 = document.getElementById("myCanvas10");
+const ctx10 = canvas10.getContext("2d");
+
+// Red rectangle
+ctx10.beginPath();
+ctx10.lineWidth = "6";
+ctx10.strokeStyle = "red";
+ctx10.rect(5, 5, 290, 140); 
+ctx10.stroke();
+
+// Green rectangle
+ctx10.beginPath();
+ctx10.lineWidth = "4";
+ctx10.strokeStyle = "green";
+ctx10.rect(30, 30, 50, 50);
+ctx10.stroke();
+
+// Blue rectangle
+ctx10.beginPath();
+ctx10.lineWidth = "10";
+ctx10.strokeStyle = "blue";
+ctx10.rect(50, 50, 150, 80);
+ctx10.stroke();
+</script>
+
+<h3>HTML5 Canvas - clearRect()</h3>
+
+<canvas id="myCanvas11" width="300" height="150" style="border:1px solid black">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas11 = document.getElementById("myCanvas11");
+const ctx11 = canvas11.getContext("2d");
+
+ctx11.fillStyle = "pink";
+ctx11.fillRect(10,10, 150,100);
+
+ctx11.clearRect(60,35, 150,50);
+</script> 
+
+<h3>HTML5 Canvas arc() Method</h3>
+
+<canvas id="myCanvas12" width="200" height="100" style="border:1px solid #000000;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas12 = document.getElementById("myCanvas12");
+const ctx12 = canvas12.getContext("2d");
+
+ctx12.beginPath();
+ctx12.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx12.fillStyle = "red";
+ctx12.fill();
+ctx12.lineWidth = 4;
+ctx12.strokeStyle = "blue";
+ctx12.stroke();
+</script>
+
+<h3>HTML5 Canvas bezierCurveTo() Method</h3>
+
+<canvas id="myCanvas13" width="300" height="170" style="border:1px solid #000000;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas13 = document.getElementById("myCanvas13");
+const ctx13 = canvas13.getContext("2d");
+
+ctx13.beginPath();
+ctx13.moveTo(20, 20);
+ctx13.bezierCurveTo(110, 150, 180, 10, 210, 140);
+ctx13.stroke();
+</script>
+
+<h3>HTML5 Canvas linearGradient()</h3>
+
+<canvas id="myCanvas14" width="300" height="150" style="border:1px solid grey;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const c14 = document.getElementById("myCanvas14");
+const ctx14 = c14.getContext("2d");
+
+// Create linear gradient
+const grad=ctx14.createLinearGradient(0,0,280,0);
+grad.addColorStop(0, "lightblue");
+grad.addColorStop(0.5, "pink");
+grad.addColorStop(1, "lightgreen"); 
+
+// Fill rectangle with gradient
+ctx14.fillStyle = grad;
+ctx14.fillRect(10,10,280,130);
+</script>
+
+<h3>HTML5 Canvas Linear Gradient</h3>
+
+<canvas id="myCanvas15" width="300" height="150" style="border:1px solid grey;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const c15 = document.getElementById("myCanvas15");
+const ctx15 = c15.getContext("2d");
+
+// Create linear gradient
+const grad15=ctx15.createLinearGradient(0,0,280,0);
+grad15.addColorStop(0, "lightpink");
+grad15.addColorStop(1, "lightblue");
+
+// Fill text with gradient
+ctx15.font = "50px Arial";
+ctx15.fillStyle = grad15;
+ctx15.fillText("Hello World",10,80);
+</script>
+
+<h3>HTML5 Canvas radialGradient()</h3>
+
+<canvas id="myCanvas16" width="300" height="150" style="border:1px solid grey;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const c16 = document.getElementById("myCanvas16");
+const ctx16 = c16.getContext("2d");
+
+// Create gradient
+const grad16=ctx16.createRadialGradient(150,75,15,150,75,150);
+grad16.addColorStop(0,"yellow");
+grad16.addColorStop(0.3,"lightpink");
+grad16.addColorStop(1,"lightblue");  
+
+// Fill rectangle with gradient
+ctx16.fillStyle = grad16;
+ctx16.fillRect(10,10,280,130);
+</script>
+
+<h3>HTML5 Canvas textBaseline</h3>
+
+<canvas id="myCanvas17" width="500" height="150" style="border:1px solid grey;">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas17 = document.getElementById("myCanvas17");
+const ctx17 = canvas17.getContext("2d");
+
+// Create a line
+ctx17.strokeStyle = "black";
+ctx17.lineWidth  = 2;
+ctx17.beginPath();
+ctx17.moveTo(0,75);
+ctx17.lineTo(500,75);
+ctx17.stroke();
+ctx17.closePath();
+
+ctx17.font = "20px Arial";
+ctx17.fillStyle = "purple";
+
+ctx17.textBaseline = "top";
+ctx17.fillText("top", 5, 75);
+
+ctx17.textBaseline = "hanging";
+ctx17.fillText("hanging", 40, 75);
+
+ctx17.textBaseline = "middle";
+ctx17.fillText("middle", 120, 75);
+
+ctx17.textBaseline = "alphabetic";
+ctx17.fillText("alphabetic", 190, 75);
+
+ctx17.textBaseline = "ideographic";
+ctx17.fillText("ideographic", 295, 75);
+
+ctx17.textBaseline = "bottom";
+ctx17.fillText("bottom", 410, 75);
+</script>
+
+<h3>HTML5 Canvas shadowColor</h3>
+
+<canvas id="myCanvas18" width="300" height="150" style="border:1px solid grey">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas18 = document.getElementById("myCanvas18");
+const ctx18 = canvas18.getContext("2d");
+
+// Shadow
+ctx18.shadowColor = "lightblue";
+ctx18.shadowOffsetX = 10;
+ctx18.shadowOffsetY = 10;
+
+// Filled rectangle
+ctx18.fillStyle = "blue";
+ctx18.fillRect(20, 20, 100, 100);
+
+// Stroked rectangle
+ctx18.lineWidth = 4;
+ctx18.strokeStyle = "blue";
+ctx18.strokeRect(170, 20, 100, 100);
+</script>
+
+<h3>HTML5 Canvas shadowColor</h3>
+
+<canvas id="myCanvas19" width="550" height="150" style="border:1px solid grey">
+Sorry, your browser does not support canvas.
+</canvas>
+
+<script>
+const canvas19 = document.getElementById("myCanvas19");
+const ctx19 = canvas19.getContext("2d");
+
+// Shadow
+ctx19.shadowColor = "lightblue";
+ctx19.shadowOffsetX = 5;
+ctx19.shadowOffsetY = 5;
+
+ctx19.font = "50px Arial";
+
+// Filled text
+ctx19.fillStyle = "green";
+ctx19.fillText("Canvas ShadowColor!",20,60);
+
+// Stroked text
+ctx19.strokeStyle = "pink";
+ctx19.strokeText("Hello World",150,120);
+</script>
+
+
+</body>
+</html> 

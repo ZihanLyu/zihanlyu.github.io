@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* p{
+                color:gray
+            } */
+            body {
+                line-height: 1.5;
+            }
+    
+            p.small {
+                line-height: 0.2;
+            }
+            h2{
+                color:palevioletred
+            }
+        </style>
+    </head>
+<body>
+
+<h3>Defination of JavaScript Events</h3>
+<p>HTML events are <b>"things"</b> that happen to HTML elements.</p>
+<p>When JavaScript is used in HTML pages, JavaScript can <b>"react"</b> on these events.</p>
+
+<h4>HTML Events</h4>
+<p>An HTML event can be something the browser does, or something a user does.</p>
+
+<h3>The onclick Attribute</h3>
+<h2>I made a timer below:</h2>
+
+<button onclick="startUpdatingTime()">Start Time</button>
+<button onclick="stopUpdatingTime()">Stop Time</button>
+
+<p id="demo"></p>
+<p id="interval"></p>
+
+<script>
+  let intervalId; // Store interval ID
+  let startTime; // Store start time
+
+  function startUpdatingTime() {
+    if (!intervalId) { // Prevent multiple intervals
+      startTime = new Date(); // Record start time
+      intervalId = setInterval(() => {
+        document.getElementById('demo').innerHTML = new Date();
+      }, 1000); // Update every second
+    }
+  }
+
+  function stopUpdatingTime() {
+    if (intervalId) {
+      clearInterval(intervalId); // Stop interval
+      intervalId = null; // Reset interval ID
+      
+      let endTime = new Date(); // Record end time
+      let timeDiff = (endTime - startTime) / 1000; // Calculate difference in seconds
+      
+      document.getElementById('interval').innerHTML = 
+        "Time updated for: <span style='color: goldenrod; font-weight: bold;'>" + timeDiff + "</span> seconds";
+    }
+  }
+</script>
+
+</body>
+</html>

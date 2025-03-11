@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<meta charset="utf-8"> 
+<html>
+<head>
+  <title>Cook Book</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="theme-link" rel="stylesheet" href="cookMode.css">
+
+</head>
+<header>
+  <h1 id="myHeader">COOK BOOK</h1>
+  <p>Time Used: 2 hours 18 minutes</p>
+  <div class="button-container">
+    <button class="show-dishes-btn" type="button" onclick="toggleDisplay()">Show Final Dishes! 🍳</button>
+  </div>
+</header>
+
+<nav class="nav-bar">
+  <ul>
+    <li><a href="#tomato-eggs">Tomatoes with Eggs</a></li>
+    <li><a href="#egg-pancake">Egg Pancake</a></li>
+    <li><a href="#congee">Pork Congee</a></li>
+    <li><a href="../Tutorial/tutorial.html">Tutorial</a></li>
+    <li><a href="../Technical/technical.html">Technical</a></li>
+  </ul>
+</nav>
+
+<body>
+<div class="recipy" id="tomato-eggs">
+<h2>西红柿炒鸡蛋</h2>
+<h3>Tomatoes with Scrambled Eggs</h3>
+<table>
+    <tr>
+        <th>Ingredient</th>
+        <th>Amount</th>
+    </tr>
+    <tr>
+        <td>Tomatoes</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Eggs</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Salt</td>
+        <td>1 pinch</td>
+    </tr>
+    <tr>
+        <td>Sugar</td>
+        <td>1 pinch</td>
+    </tr>
+</table>
+<div id="recipe1-images">
+    <img src="Images/tomato.png" alt="tomato" width="15%">
+    <img src="Images/egg.png" alt="egg" width="15%">
+</div>
+</div> 
+
+<div class="recipy" id="egg-pancake">
+<h2>鸡蛋饼</h2>
+<h3>Egg Pancake</h3>
+<table>
+    <tr>
+        <th>Ingredient</th>
+        <th>Amount</th>
+    </tr>
+    <tr>
+        <td>Eggs</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Wheat Flour</td>
+        <td>1 lb</td>
+    </tr>
+    <tr>
+        <td>Spring Onion</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Salt and Black Pepper</td>
+        <td>1 pinch</td>
+    </tr>
+</table>
+<div id="recipe2-images">
+    <img src="Images/egg.png" alt="egg" width="15%">
+    <img src="Images/flour.png" alt="flour" width="15%">
+</div>
+</div>
+
+<div class="recipy" id="congee">
+<h2>皮蛋瘦肉粥</h2>
+<h3>Thousand-year-old Egg & Pork Congee</h3>
+<table>
+    <tr>
+        <th>Ingredient</th>
+        <th>Amount</th>
+    </tr>
+    <tr>
+        <td>Thousand-year-old Eggs</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Pork</td>
+        <td>0.5 lb</td>
+    </tr>
+    <tr>
+        <td>Jasmine Rice</td>
+        <td>1 lb</td>
+    </tr>
+</table>
+<div id="recipe3-images">
+    <img src="Images/century_egg.png" alt="century_egg" width="15%">
+    <img src="Images/pork.png" alt="pork" width="15%">
+    <img src="Images/rice.png" alt="rice" width="15%">
+</div>
+</div>
+<p><a href="https://www.pngegg.com/en/search?q=portal">Open Access Image Sources</a></p>
+
+
+<script>
+  let showingDishes = false;
+  const originalImages = {
+    recipe1: document.getElementById("recipe1-images").innerHTML,
+    recipe2: document.getElementById("recipe2-images").innerHTML,
+    recipe3: document.getElementById("recipe3-images").innerHTML
+  };
+
+  function toggleDisplay() {
+    const header = document.getElementById("myHeader");
+    const button = document.querySelector(".show-dishes-btn");
+    const recipe1Images = document.getElementById("recipe1-images");
+    const recipe2Images = document.getElementById("recipe2-images");
+    const recipe3Images = document.getElementById("recipe3-images");
+    
+    if (!showingDishes) {
+      // Show final dishes
+      header.innerHTML = "Bon Appétit!";
+      header.style.fontSize = "70px";
+      header.style.color = "rgb(170, 40, 170)";
+      button.innerHTML = "Show Ingredients! &#x1F4DD";
+      
+      recipe1Images.innerHTML = '<img src="Images/scrambled_egg_with_tomato.jpg" alt="Scrambled Eggs with Tomatoes" width="30%">';
+      recipe2Images.innerHTML = '<img src="Images/egg_pancake.jpg" alt="Egg Pancake" width="30%">';
+      recipe3Images.innerHTML = '<img src="Images/congee.jpg" alt="Congee" width="30%">';
+    } else {
+      // Show ingredients
+      header.innerHTML = "COOK BOOK";
+      header.style.fontSize = "50px";
+      header.style.color = "black";
+      button.innerHTML = "Show Final Dishes! &#127859";
+      
+      recipe1Images.innerHTML = originalImages.recipe1;
+      recipe2Images.innerHTML = originalImages.recipe2;
+      recipe3Images.innerHTML = originalImages.recipe3;
+    }
+    
+    showingDishes = !showingDishes;
+  }
+</script>
+
+</body>
+</html>
