@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/comparisonTable.css">
+<script src="./js/comparisonTable.js"></script>
+</head>
+<body>
+
+<h2>Comparison Table</h2>
+<p>I think the role of the link tag is to allow my comparisonTable.html file 
+  access the open-access online font-awesome.min.css file that coded the check 
+  and cross features. Inside each <code>td<code>, <code>fa fa-check<code> and 
+    <code>fa fa-remove</code> is using the features.</p>
+
+<table id="myTable">
+  <tr>
+    <th style="width:50%">Features</th>
+    <th>Basic</th>
+    <th>Pro</th>
+  </tr>
+  <tr>
+    <td>Sample text</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>Sample text</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>Sample text</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>Sample text</td>
+    <td><i class="fa fa-remove"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+  <tr>
+    <td>Sample text</td>
+    <td><i class="fa fa-check"></i></td>
+    <td><i class="fa fa-check"></i></td>
+  </tr>
+</table>
+
+<!-- <script>
+for (var i=0; i < NRROWS; i++){
+    addRow("New Feature", true, false);
+}
+</script> -->
+
+<!-- The version has itnerary number-->
+<script>
+  for (var i = 0; i < NRROWS; i++) {
+    addRow("New Feature " + (i+1), true, false);
+  }
+</script>
+
+
+</body>
+</html>

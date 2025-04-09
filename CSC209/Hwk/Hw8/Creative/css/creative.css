@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+* {box-sizing: border-box}
+
+.creativeSlides {
+  display: none;
+  position: relative;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.slidesFrame {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+  border-radius: 4px;
+}
+
+.next {
+  right: 10px;
+  border-radius: 4px;
+}
+
+.caption {
+  color: white;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.orderNum {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+#dotContainer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation https://stackoverflow.com/questions/11660710/css-transition-fade-in*/
+.fadeIn {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

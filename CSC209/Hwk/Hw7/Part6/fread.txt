@@ -1,0 +1,3 @@
+This is the content for fread() file.
+I am the second line of this file ~
+I am the end line of this file!!
