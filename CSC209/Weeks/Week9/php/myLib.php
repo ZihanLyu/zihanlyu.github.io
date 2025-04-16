@@ -1,8 +1,7 @@
 <?php
 function extractFolderNumber($path) {
-
     $basename = basename($path);
-    $weekNrString = substr($basename,-1);
+    $weekNrString = substr($basename,-2);
     return $weekNr = (int)$weekNrString;
 }
 ?>

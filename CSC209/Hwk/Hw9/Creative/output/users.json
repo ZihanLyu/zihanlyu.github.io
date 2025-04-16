@@ -1,0 +1,27 @@
+{
+    "peterj@icloud.com": {
+        "password": "hello!",
+        "avatar": "..\/images\/youngman_2.png",
+        "username": "peterj"
+    },
+    "ada@gmail.com": {
+        "password": "ada123",
+        "avatar": "..\/images\/woman_2.png",
+        "username": "ada"
+    },
+    "david@hotmail.com": {
+        "password": "DDDD2010",
+        "avatar": "..\/images\/boy_2.png",
+        "username": "david"
+    },
+    "lucy@163.com": {
+        "password": "6flyingcats",
+        "avatar": "..\/images\/girl_3.png",
+        "username": "lucy"
+    },
+    "zebrafish@outlook.com": {
+        "password": "GloFish",
+        "avatar": "..\/images\/oldman_1.png",
+        "username": "zebrafish"
+    }
+}
