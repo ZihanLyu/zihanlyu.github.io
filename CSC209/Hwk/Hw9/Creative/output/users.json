@@ -23,5 +23,35 @@
         "password": "GloFish",
         "avatar": "..\/images\/oldman_1.png",
         "username": "zebrafish"
+    },
+    "emma@smith.edu": {
+        "password": "emmaishere",
+        "avatar": "..\/images\/youngwoman_2.png",
+        "username": "emma"
+    },
+    "yyin@smith.edu": {
+        "password": "yyin",
+        "avatar": "..\/images\/youngwoman_2.png",
+        "username": "yyin"
+    },
+    "llyu69@smith.edu": {
+        "password": "1234!",
+        "avatar": "..\/images\/oldman_1.png",
+        "username": "llyu69"
+    },
+    "betty@icloud.com": {
+        "password": "betty",
+        "avatar": "..\/images\/youngwoman_3.png",
+        "username": "betty"
+    },
+    "husguew@smith.edu": {
+        "password": "hahahahahahahahahaha",
+        "avatar": "..\/images\/oldman_1.png",
+        "username": "husguew"
+    },
+    "oldMAN@smith.no": {
+        "password": "hahahahahah",
+        "avatar": "..\/images\/youngman_3.png",
+        "username": "oldMAN"
     }
 }
