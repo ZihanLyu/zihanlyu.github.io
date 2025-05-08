@@ -36,7 +36,7 @@ The stakeholder needs an easy-to-use interface for accessing and analyzing meteo
 # DESIGN SUMMARY  
 
 ### Key Design Decisions and Why They Were Made:  
-To enable date range selection, we implemented a **`From`** and **`To`** selection tab at the top of the webpage. This is followed by three JavaScript-controlled buttons: **`Update Graphs`**, **`Update CSV Preview`**, and **`Download Data`**.  
+To enable date range selection, we implemented a **From** and **To** selection tab at the top of the webpage. This is followed by three JavaScript-controlled buttons: **Update Graphs**, **Update CSV Preview**, and **Download Data**.  
 
 Next, there is a **weather data summarization section** with seven cards displaying the following metrics:  
 - Avg Temperature  
