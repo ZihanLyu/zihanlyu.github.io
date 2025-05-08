@@ -52,7 +52,7 @@ Below this section, we included a **daily averaged weather variable line graph**
 At the bottom of the webpage, there is a **CSV table preview** (showing 50 lines by default), which displays all the data from the selected date range.  
 
 ### Major Challenges Encountered During Development:  
-The first challenge we encountered was importing data from local datasets into tables in MySQL Workbench. We faced persistent access denials. However, after referring to resources Sian provided, we resolved this issue by changing an advanced setting in our MySQL connection. Another major challenge was editing the decimal places of table entries based on Paul’s request. Specifically, we were able to successfully change the table displayed in MySQL Workbench, but the table on our web interface wasn’t updated. We eventually solved this problem using the `ALTER TABLE` and `Modify` query.  
+The first challenge we encountered was importing data from local datasets into tables in MySQL Workbench. We faced persistent access denials. However, after referring to resources Sian provided, we resolved this issue by changing an advanced setting in our MySQL connection. Another major challenge was editing the decimal places of table entries based on Paul’s request. Specifically, we were able to successfully change the table displayed in MySQL Workbench, but the table on our web interface wasn’t updated. We eventually solved this problem using the `ALTER TABLE` and `MODIFY` query.  
 
 ### Screen Shots
 ![Screenshot 1](images/screenshot_1.png)
