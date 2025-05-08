@@ -1,0 +1,58 @@
+{
+    "yyin@smith.edu": [
+        {
+            "id": "new",
+            "name": "New tasks",
+            "icon": "&#128203;"
+        },
+        {
+            "id": "today",
+            "name": "Do today",
+            "icon": "&#10024;"
+        },
+        {
+            "id": "later",
+            "name": "Do later",
+            "icon": "&#128338;"
+        },
+        {
+            "id": "test_681265bd8cf14",
+            "name": "Test",
+            "icon": "\ud83d\udccc"
+        }
+    ],
+    "test@gmail.com": [
+        {
+            "id": "new",
+            "name": "New tasks",
+            "icon": "&#128203;"
+        },
+        {
+            "id": "today",
+            "name": "Do today",
+            "icon": "&#10024;"
+        },
+        {
+            "id": "later",
+            "name": "Do later",
+            "icon": "&#128338;"
+        }
+    ],
+    "1234@gmail.com": [
+        {
+            "id": "new",
+            "name": "New tasks",
+            "icon": "&#128203;"
+        },
+        {
+            "id": "today",
+            "name": "Do today",
+            "icon": "&#10024;"
+        },
+        {
+            "id": "later",
+            "name": "Do later",
+            "icon": "&#128338;"
+        }
+    ]
+}

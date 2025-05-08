@@ -1,0 +1,87 @@
+body {
+    background-color: #1e213f;
+    color: #d7e0ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.welcome-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #2e325a;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-avatar-container {
+    margin: 0 auto 20px;
+}
+
+.welcome-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #d7e0ff;
+    object-fit: cover;
+}
+
+.username {
+    color: #f87070;
+    font-weight: bold;
+}
+
+.welcome-message {
+    margin: 20px 0;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.welcome-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.welcome-btn {
+    padding: 12px 25px;
+    background-color: #2e325a;
+    color: #d7e0ff;
+    border: 2px solid #d7e0ff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.welcome-btn:hover {
+    background-color: #f87070;
+    border-color: #f87070;
+    color: #fff;
+}
+
+.start-btn {
+    background-color: #373a64;
+}
+
+@media (max-width: 768px) {
+    .welcome-container {
+        margin: 50px auto;
+        padding: 20px;
+        width: 90%;
+    }
+    
+    .welcome-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .welcome-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
