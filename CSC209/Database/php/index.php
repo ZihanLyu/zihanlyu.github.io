@@ -54,7 +54,6 @@ try {
         $summary = $summaryStmt->fetch(PDO::FETCH_ASSOC);
 
         // Format summary data
-        // Format summary data with rounding up
         $precisionMap = [
             'total_rainfall' => 2
         ];
@@ -176,7 +175,7 @@ try {
         foreach ($tableData as $row) {
             $html .= '<tr>';
             foreach ($row as $columnName => $value) {
-                // You can adjust which fields need 1 or 2 decimals
+                // Adjust which fields need 1 or 2 decimals
                 if (is_numeric($value)) {
                     // Apply rounding based on precision, for example, 2 decimals for 'total_rainfall', 1 for others
                     $precision = 1; // Default precision

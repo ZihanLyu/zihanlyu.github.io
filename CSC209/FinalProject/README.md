@@ -67,5 +67,22 @@ Hover your cursor over the avatar in the top-left corner of the screen. A dropdo
 - Click **"Delete"** to permanently delete the task.
 - Click **"Clear All History"** to delete all completed tasks at once.
 
+# Outside Sources: 
+- W3schools: most used website to find how to make the features working. 
+- https://asana.com/go/demo: The layout and what kind of functions we will include in our website
 
+# Previous Homeworks Used
+- Hw9: used the login, admin code from this one.
+- Hw4: revised based on animation code from this homework.
 
+# Requirements we Fulfilled
+We satified all requirements.
+- Implemented complete web application using HTML, CSS, JavaScript, and PHP for an integrated user experience.
+- All data stored in JSON files without databases.
+- Consistent design and purpose throughout all pages and features.
+- Complete user registration, login, and admin functionality.
+- Users can create, view, edit, and delete their personal data.
+- Pages update dynamically based on user interactions and server changes.
+- Organized code into logical folders with descriptive function names and helpful comments.
+- Integrated interactive graphics using Javascript.
+- Client-side JavaScript for UI interaction and PHP/AJAX for server communication.
